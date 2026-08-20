@@ -3,143 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | AI in Medical Imaging</title>
+<title>Shravani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background: #fff9fb;
-    color: #4a2e39;
-    line-height: 1.6;
+    font-family: 'Jost', sans-serif;
+    background: #fffbfc;
+    color: #4a2436;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 0.3px;
   }
+
   header {
-    background: linear-gradient(135deg, #ffd6e8, #ffe9d6);
-    padding: 100px 20px 80px;
+    position: relative;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    overflow: hidden;
   }
-  header h1 { font-size: 2.8rem; color: #7a3b57; }
-  header p { font-size: 1.2rem; margin-top: 10px; color: #6a4a55; }
+  header svg.waves {
+    position: absolute; top:0; left:0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+  header .content { position: relative; z-index: 2; }
+  header .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    color: #fff;
+    opacity: 0.85;
+    margin-bottom: 18px;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 30px rgba(176,36,88,0.25);
+  }
+  header .pronunciation {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: #fff;
+    opacity: 0.85;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  header .line {
+    width: 50px; height: 1px; background: #fff;
+    opacity: 0.7;
+    margin: 28px auto;
+  }
+
   nav {
-    display:flex; justify-content:center; gap:30px;
-    padding:20px; background:#fff; position:sticky; top:0; z-index:10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display:flex; justify-content:center; gap:50px;
+    padding: 22px; background: #fffbfc;
+    position: sticky; top: 0; z-index: 50;
+    border-bottom: 1px solid #fad2de;
   }
-  nav a { text-decoration:none; color:#a4507a; font-weight:600; }
-  nav a:hover { color:#e585ac; }
-  section { padding:60px 10%; max-width:1000px; margin:auto; }
+  nav a {
+    text-decoration:none; color:#b0245e;
+    font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
+    transition: color 0.25s;
+  }
+  nav a:hover { color:#4a2436; }
+
+  section { padding: 110px 12%; max-width: 980px; margin: auto; }
+
+  .section-label {
+    text-transform: uppercase; letter-spacing: 4px;
+    font-size: 0.75rem; color: #d6467c; margin-bottom: 14px;
+  }
   h2 {
-    color:#a4507a; font-size:2rem; margin-bottom:20px;
-    border-bottom:3px solid #ffd6e8; display:inline-block; padding-bottom:5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: #b02458; font-size: 2.6rem; margin-bottom: 45px;
   }
-  .grid {
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:25px; margin-top:30px;
+
+  #about p {
+    font-size: 1.15rem; max-width: 640px; color: #5c3244;
+    font-weight: 300;
   }
-  .card {
-    background:#fff; border-radius:16px; padding:25px;
-    box-shadow:0 4px 15px rgba(255,182,193,0.25);
-    transition: transform 0.2s;
+
+  .skills-row {
+    display:flex; flex-wrap:wrap; gap: 14px 40px; margin-top: 10px;
   }
-  .card:hover { transform: translateY(-5px); }
-  .card h3 { color:#7a3b57; margin-bottom:8px; }
-  .tags { margin-top:12px; }
-  .tag {
-    display:inline-block; background:#ffe3ee; color:#a4507a;
-    padding:4px 12px; border-radius:20px; font-size:0.8rem;
-    margin-right:6px; margin-top:6px;
+  .skills-row span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: #a6355e;
+    border-bottom: 1px solid #fad2de; padding-bottom: 4px;
   }
-  .skills-list { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
-  .skill {
-    background:#ffe9d6; color:#8a5a33; padding:10px 18px;
-    border-radius:20px; font-weight:600;
+
+  .projects { display: flex; flex-direction: column; gap: 0; }
+  .project {
+    display: grid; grid-template-columns: 90px 1fr;
+    gap: 30px; padding: 34px 0;
+    border-top: 1px solid #fad2de;
   }
+  .project:last-child { border-bottom: 1px solid #fad2de; }
+  .project .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: #e87b9b;
+  }
+  .project h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-size: 1.5rem; color: #4a2436; margin-bottom: 8px;
+  }
+  .project p { color: #6e3c50; font-size: 0.98rem; margin-bottom: 10px; }
+  .project .stack {
+    font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #c25a80;
+  }
+
   .photo-grid {
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:15px; margin-top:30px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 6px; margin-top: 10px;
   }
   .photo-grid img {
-    width:100%; height:220px; object-fit:cover; border-radius:14px;
+    width: 100%; height: 260px; object-fit: cover;
+    cursor: pointer; filter: grayscale(15%);
+    transition: filter 0.4s;
   }
+  .photo-grid img:hover { filter: grayscale(0%); }
+
+  #lightbox {
+    display:none; position:fixed; inset:0;
+    background: rgba(60,15,35,0.9); z-index:100;
+    align-items:center; justify-content:center;
+  }
+  #lightbox img { max-width:85%; max-height:85%; }
+  #lightbox span {
+    position:absolute; top:32px; right:44px;
+    color:#fff; font-size:1.8rem; cursor:pointer; font-weight:300;
+  }
+
   footer {
-    text-align:center; padding:40px; background:#ffd6e8; margin-top:60px;
+    text-align:center; padding: 70px 20px;
+    border-top: 1px solid #fad2de;
   }
-  footer a { color:#7a3b57; margin:0 10px; font-weight:600; text-decoration:none; }
+  footer .section-label { text-align:center; }
+  footer .socials {
+    display:flex; justify-content:center; gap: 36px; margin-top: 20px;
+  }
+  footer a {
+    color:#a6355e; text-decoration:none; font-size: 0.85rem;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    border-bottom: 1px solid transparent; padding-bottom: 3px;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  footer a:hover { color:#4a2436; border-color: #e87b9b; }
+
+  @media (max-width: 640px) {
+    header h1 { font-size: 3rem; }
+    section { padding: 70px 8%; }
+    .photo-grid { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Hi, I'm [Your Name] 🎀</h1>
-  <p>Building AI for medical imaging — X-ray · MRI · CT — and capturing life through a lens 📸</p>
+  <svg class="waves" viewBox="0 0 700 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <rect width="700" height="800" fill="#FDEAF0"/>
+    <path d="M0,0 L280,0 C220,150 340,260 260,400 C180,540 300,650 220,800 L0,800 Z" fill="#F3AFC4"/>
+    <path d="M0,0 L180,0 C130,140 230,250 170,380 C110,510 200,620 140,800 L0,800 Z" fill="#E87B9B"/>
+    <path d="M0,0 L90,0 C70,130 120,230 90,360 C60,490 100,600 70,800 L0,800 Z" fill="#D6467C"/>
+    <path d="M0,0 L30,0 C20,140 45,240 30,380 C15,520 35,620 25,800 L0,800 Z" fill="#B02458"/>
+  </svg>
+  <div class="content">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Shravani</h1>
+    <p class="pronunciation">pronounced "Shrav-nee"</p>
+    <div class="line"></div>
+  </div>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
   <a href="#photography">Photography</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I'm passionate about applying AI and machine learning to medical imaging — helping make diagnosis faster and more accurate using X-ray, MRI, and CT data. Outside the lab, I love photography and telling stories through images. Add a few sentences here about your background, degree, or goals.</p>
+<section id="skills">
+  <p class="section-label">01 — Skills</p>
+  <h2>What I work with</h2>
+  <div class="skills-row">
+    <span>Python</span>
+    <span>MATLAB</span>
+    <span>Fiji / ImageJ</span>
+    <span>Deep Learning</span>
+    <span>Image Segmentation</span>
+    <span>Medical Imaging — X-ray, MRI, CT</span>
+  </div>
 </section>
 
 <section id="projects">
-  <h2>Medical Imaging Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Project Title 1</h3>
-      <p>Short description of what the project does and the problem it solves.</p>
-      <div class="tags">
-        <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">X-ray</span>
+  <p class="section-label">02 — Projects</p>
+  <h2>Selected work</h2>
+  <div class="projects">
+    <div class="project">
+      <div class="num">01</div>
+      <div>
+        <h3>Project Title One</h3>
+        <p>Short description of the project — the problem, your approach, and the outcome.</p>
+        <div class="stack">Python · CNN · X-ray</div>
       </div>
     </div>
-    <div class="card">
-      <h3>Project Title 2</h3>
-      <p>Short description — e.g. MRI tumor segmentation pipeline.</p>
-      <div class="tags">
-        <span class="tag">MATLAB</span><span class="tag">MRI</span>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Project Title 3</h3>
-      <p>Short description — e.g. CT image analysis using Fiji/ImageJ.</p>
-      <div class="tags">
-        <span class="tag">Fiji/ImageJ</span><span class="tag">CT</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skills & Tools</h2>
-  <div class="skills-list">
-    <span class="skill">Python</span>
-    <span class="skill">MATLAB</span>
-    <span class="skill">Fiji / ImageJ</span>
-    <span class="skill">Deep Learning</span>
-    <span class="skill">Image Segmentation</span>
-    <span class="skill">Photography</span>
-  </div>
-</section>
-
-<section id="photography">
-  <h2>Photography</h2>
-  <div class="photo-grid">
-    <img src="images/photo1.jpg" alt="Photo 1">
-    <img src="images/photo2.jpg" alt="Photo 2">
-    <img src="images/photo3.jpg" alt="Photo 3">
-  </div>
-</section>
-
-<footer id="contact">
-  <p>Let's connect</p>
-  <a href="mailto:youremail@example.com">Email</a>
-  <a href="#">LinkedIn</a>
-  <a href="#">Instagram</a>
-</footer>
-
-</body>
-</html>
+    <div class="project">
+      <div class="num">02</div>
+      <div>
+        <h3>Project Title Two</h3>
+        <p>Short description — e.g. an MRI segmentation pipeline you built.</p>
+        <div class="stack">MATLAB ·
