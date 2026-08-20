@@ -72,10 +72,11 @@
   }
 
   nav {
-    display:flex; justify-content:center; gap:50px;
+    display:flex; justify-content:center; gap:40px;
     padding: 22px; background: #fffbfc;
     position: sticky; top: 0; z-index: 50;
     border-bottom: 1px solid #fad2de;
+    flex-wrap: wrap;
   }
   nav a {
     text-decoration:none; color:#b0245e;
@@ -91,136 +92,4 @@
     font-size: 0.75rem; color: #d6467c; margin-bottom: 14px;
   }
   h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    color: #b02458; font-size: 2.6rem; margin-bottom: 45px;
-  }
-
-  #about p {
-    font-size: 1.15rem; max-width: 640px; color: #5c3244;
-    font-weight: 300;
-  }
-
-  .skills-row {
-    display:flex; flex-wrap:wrap; gap: 14px 40px; margin-top: 10px;
-  }
-  .skills-row span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem; color: #a6355e;
-    border-bottom: 1px solid #fad2de; padding-bottom: 4px;
-  }
-
-  .projects { display: flex; flex-direction: column; gap: 0; }
-  .project {
-    display: grid; grid-template-columns: 90px 1fr;
-    gap: 30px; padding: 34px 0;
-    border-top: 1px solid #fad2de;
-  }
-  .project:last-child { border-bottom: 1px solid #fad2de; }
-  .project .num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem; color: #e87b9b;
-  }
-  .project h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600; font-size: 1.5rem; color: #4a2436; margin-bottom: 8px;
-  }
-  .project p { color: #6e3c50; font-size: 0.98rem; margin-bottom: 10px; }
-  .project .stack {
-    font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;
-    color: #c25a80;
-  }
-
-  .photo-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 6px; margin-top: 10px;
-  }
-  .photo-grid img {
-    width: 100%; height: 260px; object-fit: cover;
-    cursor: pointer; filter: grayscale(15%);
-    transition: filter 0.4s;
-  }
-  .photo-grid img:hover { filter: grayscale(0%); }
-
-  #lightbox {
-    display:none; position:fixed; inset:0;
-    background: rgba(60,15,35,0.9); z-index:100;
-    align-items:center; justify-content:center;
-  }
-  #lightbox img { max-width:85%; max-height:85%; }
-  #lightbox span {
-    position:absolute; top:32px; right:44px;
-    color:#fff; font-size:1.8rem; cursor:pointer; font-weight:300;
-  }
-
-  footer {
-    text-align:center; padding: 70px 20px;
-    border-top: 1px solid #fad2de;
-  }
-  footer .section-label { text-align:center; }
-  footer .socials {
-    display:flex; justify-content:center; gap: 36px; margin-top: 20px;
-  }
-  footer a {
-    color:#a6355e; text-decoration:none; font-size: 0.85rem;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    border-bottom: 1px solid transparent; padding-bottom: 3px;
-    transition: border-color 0.25s, color 0.25s;
-  }
-  footer a:hover { color:#4a2436; border-color: #e87b9b; }
-
-  @media (max-width: 640px) {
-    header h1 { font-size: 3rem; }
-    section { padding: 70px 8%; }
-    .photo-grid { grid-template-columns: 1fr 1fr; }
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <div class="content">
-    <p class="eyebrow">Portfolio</p>
-    <h1>Your Name</h1>
-    <p class="pronunciation">pronounced "shrav-nee"</p>
-    <div class="line"></div>
-  </div>
-</header>
-
-<nav>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#photography">Photography</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="skills">
-  <p class="section-label">01 — Skills</p>
-  <h2>What I work with</h2>
-  <div class="skills-row">
-    <span>Python</span>
-    <span>MATLAB</span>
-    <span>Fiji / ImageJ</span>
-    <span>Deep Learning</span>
-    <span>Image Segmentation</span>
-    <span>Medical Imaging — X-ray, MRI, CT</span>
-  </div>
-</section>
-
-<section id="projects">
-  <p class="section-label">02 — Projects</p>
-  <h2>Selected work</h2>
-  <div class="projects">
-    <div class="project">
-      <div class="num">01</div>
-      <div>
-        <h3>Project Title One</h3>
-        <p>Short description of the project — the problem, your approach, and the outcome.</p>
-        <div class="stack">Python · CNN · X-ray</div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="num">02</div>
-      <div>
-        <h3>Project Title Two</h3>
-        <p>Short description — e.g. an MRI
+    font-family:
