@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | AI in Medical Imaging</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fff9fb;
+    color: #4a2e39;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #ffd6e8, #ffe9d6);
+    padding: 100px 20px 80px;
+    text-align: center;
+  }
+  header h1 { font-size: 2.8rem; color: #7a3b57; }
+  header p { font-size: 1.2rem; margin-top: 10px; color: #6a4a55; }
+  nav {
+    display:flex; justify-content:center; gap:30px;
+    padding:20px; background:#fff; position:sticky; top:0; z-index:10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  nav a { text-decoration:none; color:#a4507a; font-weight:600; }
+  nav a:hover { color:#e585ac; }
+  section { padding:60px 10%; max-width:1000px; margin:auto; }
+  h2 {
+    color:#a4507a; font-size:2rem; margin-bottom:20px;
+    border-bottom:3px solid #ffd6e8; display:inline-block; padding-bottom:5px;
+  }
+  .grid {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:25px; margin-top:30px;
+  }
+  .card {
+    background:#fff; border-radius:16px; padding:25px;
+    box-shadow:0 4px 15px rgba(255,182,193,0.25);
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-5px); }
+  .card h3 { color:#7a3b57; margin-bottom:8px; }
+  .tags { margin-top:12px; }
+  .tag {
+    display:inline-block; background:#ffe3ee; color:#a4507a;
+    padding:4px 12px; border-radius:20px; font-size:0.8rem;
+    margin-right:6px; margin-top:6px;
+  }
+  .skills-list { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+  .skill {
+    background:#ffe9d6; color:#8a5a33; padding:10px 18px;
+    border-radius:20px; font-weight:600;
+  }
+  .photo-grid {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:15px; margin-top:30px;
+  }
+  .photo-grid img {
+    width:100%; height:220px; object-fit:cover; border-radius:14px;
+  }
+  footer {
+    text-align:center; padding:40px; background:#ffd6e8; margin-top:60px;
+  }
+  footer a { color:#7a3b57; margin:0 10px; font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Hi, I'm [Your Name] 🎀</h1>
+  <p>Building AI for medical imaging — X-ray · MRI · CT — and capturing life through a lens 📸</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#photography">Photography</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm passionate about applying AI and machine learning to medical imaging — helping make diagnosis faster and more accurate using X-ray, MRI, and CT data. Outside the lab, I love photography and telling stories through images. Add a few sentences here about your background, degree, or goals.</p>
+</section>
+
+<section id="projects">
+  <h2>Medical Imaging Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Project Title 1</h3>
+      <p>Short description of what the project does and the problem it solves.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">X-ray</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Project Title 2</h3>
+      <p>Short description — e.g. MRI tumor segmentation pipeline.</p>
+      <div class="tags">
+        <span class="tag">MATLAB</span><span class="tag">MRI</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Project Title 3</h3>
+      <p>Short description — e.g. CT image analysis using Fiji/ImageJ.</p>
+      <div class="tags">
+        <span class="tag">Fiji/ImageJ</span><span class="tag">CT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <div class="skills-list">
+    <span class="skill">Python</span>
+    <span class="skill">MATLAB</span>
+    <span class="skill">Fiji / ImageJ</span>
+    <span class="skill">Deep Learning</span>
+    <span class="skill">Image Segmentation</span>
+    <span class="skill">Photography</span>
+  </div>
+</section>
+
+<section id="photography">
+  <h2>Photography</h2>
+  <div class="photo-grid">
+    <img src="images/photo1.jpg" alt="Photo 1">
+    <img src="images/photo2.jpg" alt="Photo 2">
+    <img src="images/photo3.jpg" alt="Photo 3">
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Let's connect</p>
+  <a href="mailto:youremail@example.com">Email</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">Instagram</a>
+</footer>
+
+</body>
+</html>
