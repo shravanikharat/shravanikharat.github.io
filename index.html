@@ -307,8 +307,9 @@
   }
   function openNotebook(url) {
     document.getElementById('notebook-frame').src = url;
+    document.getElementById('notebook-newtab').href = url;
     document.getElementById('notebook-modal').style.display = 'flex';
-  }
+}
   function closeNotebook() {
     document.getElementById('notebook-modal').style.display = 'none';
     document.getElementById('notebook-frame').src = '';
